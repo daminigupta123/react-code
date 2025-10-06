@@ -51,19 +51,26 @@ const App = () => {
     SetData([...data,input])
 
   }
+  function dlt(){
+    SetData([])
+  }
   return (
     <div>
-
+      
       <input onChange={fun1}/>
       <button onClick={done}>click</button>
       {
         data.map((a)=>{
           return(<>
           <h2>{a}</h2>
+          <button onClick={dlt}>delete</button>
           </>)
 
         })
       }
+
+ 
+ 
     </div>
   )
 }
